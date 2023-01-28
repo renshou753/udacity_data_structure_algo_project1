@@ -1,0 +1,12 @@
+#### Code Design
+
+In this program recursion and list were used to check if a particular user is in the group, groups and users are represented as list where child group class is added to the parent groups list, this can go arbitrarily deep as child group can then be added to another child as group.
+
+Recursion can be a good fit for the program as we don't know how deep the structure can be.
+
+
+#### Efficiency
+
+Similar to the file recursion problem, right here it takes O(n) to loop through the groups in the list, and O(n) to loop through each user in the group, if the structure is only one level deep it takes O(m*n) where m is the number of groups and n is the average number of users in each group, however, if there are nested subgroups it would take O(m*n*q) where q is the number of subgroups under parent group. At here I would estimate the worst time efficiency to be O(n^x).
+
+Depends on the number of subgroups the space would be O(x*2n), each group has to maintain its space to save groups and users list so on average I estimate O(n).
