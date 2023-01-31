@@ -47,7 +47,7 @@ def test_functions(basedir):
 
     # test files that end with .c
     files = find_files('.c', basedir)
-    test_result = test_suffix('.md', files)
+    test_result = test_suffix('.c', files)
     print(f'Pass' if test_result else 'Fail')
 
 if __name__ == "__main__":

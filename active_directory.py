@@ -45,7 +45,7 @@ child.add_group(sub_child)
 parent.add_group(child)
 
 if __name__ == "__main__":
-    print(is_user_in_group("tony", child))
-    print(is_user_in_group("sub_child_user", sub_child))
-    print(is_user_in_group("sub_child_user", parent))
-    print(is_user_in_group("sub_child_user", child))
+    print("Pass" if not is_user_in_group("tony", child) else "Fail")   # tony is not in the group, false
+    print("Pass" if is_user_in_group("sub_child_user", sub_child) else "Fail")
+    print("Pass" if is_user_in_group("sub_child_user", parent) else "Fail")
+    print("Pass" if is_user_in_group("sub_child_user", child) else "Fail")
